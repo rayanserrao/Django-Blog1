@@ -1,0 +1,153 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container jumbotron">
+    <div class="datab">
+        <h1>Database in Python</h1>
+        <p>Databases storage implementations vary in complexity. SQLite, a database included with Python, creates a
+            single file for all data per database.Other databases are such as PostgreSQL, MySQL, Oracle and Microsoft
+            SQL Server etc. </p>
+        <br>
+        <h2>Most Common Database</h2>
+        <p>PostgreSQL and MySQL are two of the most common open source databases for storing Python web applications'
+            data.</p>
+    </div>
+</div>
+<br>
+<div class=" jumbotron container">
+    <span>Will talk about <h4>MySQL Database</h4></span>
+    <p>MySQL is an interface for connecting to a MySQL database server from Python. It implements the Python Database
+        API v2.0.</p>
+</div>
+<br>
+<div class="container">
+    <h5>How do I install Mysql?</h5>
+    <div class="jumbotron ">
+
+        <p>For Python command prompt, use the following command -
+            <br>
+            <br>
+            pip install mysql.connector</p>
+
+    </div>
+
+    <h5>Syntax and example for connecting database</h5>
+    <div class="jumbotron">
+        <h6> import mysql.connector</h6>
+
+        <p>
+
+            # Open database connection
+            <br>
+            db=mysql.connector.connect(host="hostname",user="username",password="password",database="databasename")
+            <br>
+            db = mysql.connector.connect(host="localhost",user="testuser",password="test123",databse="test" )
+            <br>
+            <br></p>
+
+        <p>
+            # prepare a cursor object using cursor() method
+            <br>
+            cursor = db.cursor()
+            <br><br>
+        </p>
+
+        <p>
+
+            # execute SQL query using execute() method.
+            <br>
+            cursor.execute("SELECT VERSION()")
+            <br>
+            <br>
+        </p>
+        <p>
+            # Fetch a single row using fetchone() method.
+            <br>
+            data = cursor.fetchone()
+            <br>
+            print "Database version : %s " % data
+            <br>
+            <br>
+        </p>
+
+        # disconnect from server
+        <br>
+        db.close()
+    </div>
+    <br>
+
+
+    <h5>Creating Databse table</h5>
+    <div class="jumbotron">
+        <h6>Will create table of name employee</h6>
+        <div>
+            cur=db.cursor()
+            <br>
+            s="create table employee(id int, name varchar(20),project varchar(20))"
+            <br>
+
+            cursor.execute(s)
+            <br>
+            db.commit()
+            <br>
+            print('table created')
+        </div>
+
+
+    </div>
+
+    <h5>Inserting into database</h5>
+    <div class="jumbotron">
+        <div>
+            cursor=db.cursor()
+            <br>
+            s="insert into employee values(110, 'rayan', 'Djano')"
+            <br>
+            cur.execute(s)
+            <br>
+            db.commit()
+            <br>
+            print('data saved')
+        </div>
+
+    </div>
+
+    <h5>Updating databse<h5></h5>
+        <div class="jumbotron">
+            cursor=db.cursor()
+            <br>
+            s="update employee set project='Python' where id=110"
+            <br>
+            cursor.execute(s)
+            <br>
+            db.commit()
+            <br>
+            print('data udpated')
+
+        </div>
+
+        <h5>Deleting Entry</h5>
+        <div class="jumbotron">
+            cursor=db.cursor()
+            <br>
+            s="delete from employee where id=110"
+            <br>
+            cur.execute(s)
+            <br>
+            db.commit()
+            <br>
+            print('data deleted')
+        </div>
+
+
+
+</div>
+</div>
+
+<div class="container">
+    <h6>Want to know more about database?</h6>
+    <a class="btn btn-primary" href="https://www.w3schools.com/python/python_mysql_getstarted.asp">Check me out</a>
+</div>
+
+
+
+{% endblock %}

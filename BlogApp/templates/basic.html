@@ -1,0 +1,94 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container">
+    <h5>About Python</h5>
+    <div class="jumbotron">
+        <b>
+            Python </b> is an interpreted, high-level and general-purpose programming language. Created by <b>Guido van
+            Rossum</b> and
+        first released in 1991.
+        <br>
+        <br>
+        Python is dynamically typed and garbage-collected. It supports multiple programming paradigms, including
+        structured, object-oriented, and functional programming. Python is often described as a "batteries included"
+        language due to its comprehensive standard library.
+    </div>
+
+    <h5>Simple Python Rules</h5>
+    <div class="jumbotron">
+        <ol>
+            <li> <b>
+                    Python Identifiers </b></li>
+            <p>A Python identifier is a name used to identify a variable, function, class, module or other object.</p>
+            <ul>
+                <li>
+                    Class names start with an uppercase letter. All other identifiers start with a lowercase letter.
+                </li>
+                <li>Starting an identifier with a single leading underscore indicates that the identifier is private.
+                </li>
+                <li>Starting an identifier with two leading underscores indicates a strongly private identifier.</li>
+            </ul>
+            <br>
+            <li><b>
+                    Lines and Indentation
+                </b>
+            </li>
+            <p>Blocks of code are denoted by line indentation, which is rigidly enforced.</p>
+
+            <p>The number of spaces in the indentation is variable, but all statements within the block must be indented
+                the same amount.</p>
+            <br>
+            <li> <b>
+                    Comments in Python </b></li>
+            <p>A hash sign (#) that is not inside a string literal begins a comment.</p>
+            <p>Triple-quoted(''') string is also ignored by Python interpreter and can be used as a multiline comments.
+            </p>
+        </ol>
+
+        <small>Want to know more about Python? Click bellow.</small>
+        <br>
+        <a class="btn btn-warning" href="https://docs.python.org/3/">Python</a>
+
+    </div>
+
+    <h5>Python Webdevelopment Frameworks
+
+    </h5>
+    <div class="jumbotron">Python is one of the most acceptable languages among web and application developers because
+        of its strong emphasis on efficiency and readability. There are numerous outstanding Python web frameworks, each
+        with their own specialities and features, such as <b>Django</b>,<b>Flask</b>,Web2py,Pyramid,Dash.
+        <br>
+        <br>
+        <h6>Will talk about Django and Flask</h6>
+        <ul>
+            <li> <b>
+                    Django
+                </b>
+
+            </li>
+            <p>Django is based on MVT (Model View Template).Built by experienced developers, Django is a high level
+                Python web framework which allows rapid, clean and pragmatic design development. Django handles much of
+                the complexities of web development.
+
+            </p>
+            <p>It works with mostly all important databases like Oracle, MySQL, PostgreSQL, SQLite, etc.</p>
+            <small>Want to know more about Django?</small>
+            <a class="btn btn-danger" href="https://docs.djangoproject.com/en/3.1/">Check Out</a>
+            <br>
+            <br>
+            <li>
+                <b>Flask</b>
+            </li>
+            <p>It is classified as a micro-framework as we don’t require any particular libraries or tools.</p>
+            <p>Flask support multiple extensions which extended the application features as if they were implemented in
+                Flask itself. Extensions exist for object-relational mappers, form validation, upload handling etc..</p>
+            <small>Want to know kore about Flask?</small>
+            <a class="btn btn-secondary" href="https://flask.palletsprojects.com/en/1.1.x/">Check Out</a>
+        </ul>
+    </div>
+
+
+
+</div>
+
+{% endblock %}

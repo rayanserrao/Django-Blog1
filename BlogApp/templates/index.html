@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+{% block content %}
+{% load static %}
+<h1>
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner carousel-fade">
+            <div class="carousel-item active">
+                <img src="{% static 'images/2.jpeg' %}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4>Welocme to Python Techie</h4>
+                    <p>All about Database, Sockets and Python at one place</p>
+                    <small>For Tutorials Contact</small>
+                    <a class="btn btn-danger" href="https://www.regexsoftware.com/">REGex Software</a>
+                </div>
+            </div>
+            <div class="carousel-item carousel-fade">
+                <img src="{% static 'images/1.jpeg' %}"class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4>Best Blog for Beginners</h4>
+                    <p>All about Database, Sockets and Python at one place</p>
+                    <small>For Tutorials Contact</small>
+                    <a class="btn btn-danger" href="https://www.regexsoftware.com/">REGex Software</a>
+                    
+                </div>
+            </div>
+            <div class="carousel-item carousel-fade">
+                <img src="{% static 'images/3.jpeg' %}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4>CHASING DREAMS</h4>
+                    <p>All about Database, Sockets Program and Python at one place</p>
+                    <small>For Tutorials Contact</small>
+                    <a class="btn btn-danger" href="https://www.regexsoftware.com/">REGex Software</a>
+                    
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</h1>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container">
+    <h4>What is socket programing?</h4>
+    <p class="jumbotron">Socket programming is a way of connecting two nodes on a network to communicate with each other. One socket(node)
+        listens on a particular port at an IP, while other socket reaches out to the other to form a connection. Server
+        forms the listener socket while client reaches out to the server.</p>
+
+<p>Socket programming is started by importing the socket library and making a simple socket.</p>
+<div class="jumbotron">
+    import socket
+    <br>
+    s = socket.socket (socket_family, socket_type, protocol=0)
+    <br>
+    #example
+    <br>
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+</div>
+
+<h4>Server and Client Socket Methods</h4>
+<div class="jumbotron">
+<br>
+<ol>
+    <li>
+        s.bind()
+        <br>
+        This method binds address (hostname, port number pair) to socket.
+    </li>
+    <br>
+    <li>
+        
+        	
+s.listen()
+<br>
+This method sets up and start TCP listener.
+    </li>
+    <br>
+    <li>
+        s.accept()
+        <br>
+        This passively accept TCP client connection, waiting until connection arrives (blocking).
+    </li>
+    <br>
+    <li>
+        s.connect()
+        <br>
+        This method actively initiates TCP server connection
+    </li>
+</ol>
+
+</div>
+
+<h5>Want to know more about socket programing?</h5>
+<a  class="btn btn-dark" href="https://docs.python.org/3/howto/sockets.html">Check me</a>
+
+
+
+</div>
+{% endblock %}
