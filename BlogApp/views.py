@@ -5,8 +5,7 @@ from django.shortcuts import render
 def index(request):
     title="Home Page"
     return render (request,'index.html',{'title': title})
-def layout(request):
-    return render(request,'layout.html')
+
 
 def about(request):
     return render(request,'about.html')

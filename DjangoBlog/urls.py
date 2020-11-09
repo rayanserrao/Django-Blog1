@@ -24,5 +24,5 @@ urlpatterns = [
     path('databse/',databse),
     path('socketprg/',socketprogram),
     path('basicpy/',pythonrule),
-    path('lay/',layout)
+   
 ]
